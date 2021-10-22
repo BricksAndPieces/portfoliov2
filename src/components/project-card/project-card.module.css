@@ -1,0 +1,115 @@
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  position: relative;
+
+  max-width: 790px;
+  border-radius: 5px;
+  border: white 2px solid;
+  margin-bottom: 10px;
+
+  overflow: hidden;
+}
+
+.card:hover {
+  /*box-shadow: 5px 5px 5px 5px black; TODO*/
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card h3 {
+  padding-left: 30px;
+  margin-bottom: 0;
+}
+
+.card p {
+  margin: 10px 30px;
+  padding-bottom: 50px;
+}
+
+.card span {
+  color: #58b96b;
+}
+
+.card .normalThumbnail {
+  /*width: 200px;*/
+  height: 250px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.card .shiftThumbnailLeft {
+  object-position: left;
+}
+
+.card .mobileThumbnail {
+  display: none;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.card .iconContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+
+  width: calc(100% - 250px);
+  box-sizing: border-box;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.iconContainer i {
+  font-size: 1.5em;
+  color: white;
+}
+
+.iconContainer .toolsContainer {
+  display: flex;
+  float: left;
+}
+
+.iconContainer .toolsContainer i {
+  padding-right: 10px;;
+}
+
+.iconContainer .webLinksContainer {
+  display: flex;
+  float: right;
+}
+
+.iconContainer .webLinksContainer i {
+  padding-left: 10px;;
+}
+
+.iconContainer .webLinksContainer i:hover {
+  color: #58b96b;
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    display: block;
+    margin: 15px;
+  }
+
+  .card .mobileThumbnail {
+    display: block;
+  }
+
+  .card .normalThumbnail {
+    display: none;
+  }
+
+  .card .iconContainer {
+    width: 100%;
+  }
+}

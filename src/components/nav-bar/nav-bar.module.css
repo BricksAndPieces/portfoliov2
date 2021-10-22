@@ -1,0 +1,144 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+
+  transition: all 0.1s;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.header li {
+  list-style: none;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.header li a {
+  display: block;
+  padding: 6px 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.header li a:hover,
+.header .menuBtn:hover,
+.header .active {
+  color: #1e596a;
+  background: white;
+  border-radius: 20px;
+}
+
+.header .logo h2 {
+  display: block;
+  float: left;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 30px;
+
+  transition: all 0.2s;
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+.header .menuIcon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 42.5px 30px;
+  position: relative;
+  user-select: none;
+
+  transition: padding .2s ease-out;
+}
+
+.header .menuIcon .navicon {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menuIcon .navicon:before,
+.header .menuIcon .navicon:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menuIcon .navicon:before {
+  top: 5px;
+}
+
+.header .menuIcon .navicon:after {
+  top: -5px;
+}
+
+.header .menuBtn {
+  display: none;
+}
+
+.header .menuBtn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menuBtn:checked ~ .menuIcon .navicon {
+  background: transparent;
+}
+
+.header .menuBtn:checked ~ .menuIcon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menuBtn:checked ~ .menuIcon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menuBtn:checked ~ .menuIcon:not(.steps) .navicon:before,
+.header .menuBtn:checked ~ .menuIcon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header li {
+    float: left;
+  }
+
+  .header li a {
+    padding: 6px 15px;
+  }
+
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+
+  .header .menuIcon {
+    display: none;
+  }
+}
