@@ -79,6 +79,7 @@ export class Projects extends React.Component {
           thumbnail={BOIDS_THUMBNAIL}
           tools={["java"]}
           githubUrl={"https://github.com/BricksAndPieces/Boids-Ecosystem/"}
+          websiteUrl={"https://bricksandpieces.github.io/Boids-Ecosystem/"}
         />
       </>
     );
