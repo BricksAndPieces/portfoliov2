@@ -15,6 +15,25 @@ import RESUME_PDF from './assets/resume.pdf';
 
 function App() {
 
+  // Fix mobile navigation view height issue
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });
+
+  // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- //
+
+  // Android specific css hack
+  if (navigator.userAgent.toLowerCase().indexOf('android') > -1) {
+    document.body.style.position = "relative";
+    document.body.style.overflowX = "hidden";
+  }
+
+  // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- //
+
   React.useEffect(() => {
     const mountains = document.getElementById('mountains');
     const ground = document.getElementById('ground');
@@ -30,21 +49,11 @@ function App() {
     return () => window.removeEventListener('scroll', scrollEvent);
   })
 
+  // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- //
+
   return (
     <>
       <div className={styles.background} id={'home'}>
-        {/*<header className={styles.header} id={"header"}>*/}
-        {/*  <a href="#" className={styles.logo}><h2 id={"logo"}>Portfolio</h2></a>*/}
-        {/*  <input className={styles.menuBtn} type="checkbox" id="menuBtn"/>*/}
-        {/*  <label className={styles.menuIcon} htmlFor="menuBtn"><span className={styles.navicon}/></label>*/}
-        {/*  <ul className={styles.menu}>*/}
-        {/*    <li><a className={styles.active} href="#">Home</a></li>*/}
-        {/*    <li><a href="#about">About</a></li>*/}
-        {/*    <li><a href="#careers">Experience</a></li>*/}
-        {/*    <li><a href="#contact">Projects</a></li>*/}
-        {/*  </ul>*/}
-        {/*</header>*/}
-
         <NavBar/>
 
         <div className={styles.contentHolder} id={"name"}>
