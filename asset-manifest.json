@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "https://bricksandpieces.github.io/static/css/main.cb4b3bb2.chunk.css",
+    "main.js": "https://bricksandpieces.github.io/static/js/main.17008aa4.chunk.js",
+    "main.js.map": "https://bricksandpieces.github.io/static/js/main.17008aa4.chunk.js.map",
+    "runtime-main.js": "https://bricksandpieces.github.io/static/js/runtime-main.c5d19e13.js",
+    "runtime-main.js.map": "https://bricksandpieces.github.io/static/js/runtime-main.c5d19e13.js.map",
+    "static/js/2.03fcd29a.chunk.js": "https://bricksandpieces.github.io/static/js/2.03fcd29a.chunk.js",
+    "static/js/2.03fcd29a.chunk.js.map": "https://bricksandpieces.github.io/static/js/2.03fcd29a.chunk.js.map",
+    "static/js/3.bb3fc360.chunk.js": "https://bricksandpieces.github.io/static/js/3.bb3fc360.chunk.js",
+    "static/js/3.bb3fc360.chunk.js.map": "https://bricksandpieces.github.io/static/js/3.bb3fc360.chunk.js.map",
+    "index.html": "https://bricksandpieces.github.io/index.html",
+    "static/css/main.cb4b3bb2.chunk.css.map": "https://bricksandpieces.github.io/static/css/main.cb4b3bb2.chunk.css.map",
+    "static/js/2.03fcd29a.chunk.js.LICENSE.txt": "https://bricksandpieces.github.io/static/js/2.03fcd29a.chunk.js.LICENSE.txt",
+    "static/media/Ground.80952acf.png": "https://bricksandpieces.github.io/static/media/Ground.80952acf.png",
+    "static/media/Mountains.b16c2b0c.png": "https://bricksandpieces.github.io/static/media/Mountains.b16c2b0c.png",
+    "static/media/boids.4203ce9d.gif": "https://bricksandpieces.github.io/static/media/boids.4203ce9d.gif",
+    "static/media/covid.2d25a10f.jpg": "https://bricksandpieces.github.io/static/media/covid.2d25a10f.jpg",
+    "static/media/discord-bot.50a2648f.png": "https://bricksandpieces.github.io/static/media/discord-bot.50a2648f.png",
+    "static/media/mario.3a3b65ac.gif": "https://bricksandpieces.github.io/static/media/mario.3a3b65ac.gif",
+    "static/media/portfolio.786cc69e.png": "https://bricksandpieces.github.io/static/media/portfolio.786cc69e.png",
+    "static/media/resume.8576f298.pdf": "https://bricksandpieces.github.io/static/media/resume.8576f298.pdf",
+    "static/media/snake-ai.9207754a.gif": "https://bricksandpieces.github.io/static/media/snake-ai.9207754a.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c5d19e13.js",
+    "static/js/2.03fcd29a.chunk.js",
+    "static/css/main.cb4b3bb2.chunk.css",
+    "static/js/main.17008aa4.chunk.js"
+  ]
+}
