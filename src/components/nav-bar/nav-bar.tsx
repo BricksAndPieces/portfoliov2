@@ -3,6 +3,25 @@ import styles from "./nav-bar.module.css";
 
 export function NavBar() {
 
+  window.onload = () => {
+    // Android specific css hack
+    if (navigator.userAgent.toLowerCase().indexOf('android') > -1) {
+      const navBar = document.getElementById('header');
+      const logo = document.getElementById('logo');
+      const menuIcon = document.getElementById('menuIcon');
+      const navHome = document.getElementById('nav-home');
+
+      if (navBar && logo && menuIcon && navHome) {
+        navBar.style.backgroundColor = "#0e3147";
+        navBar.style.borderBottom = "2px solid white"
+        logo.style.marginTop = "5px"
+        logo.style.marginBottom = "5px"
+        menuIcon.style.padding = "22.5px 30px";
+        navHome.classList.remove(styles.active)
+      }
+    }
+  }
+
   React.useEffect(() => {
     const navSectionsIds = ['home', 'about', 'experience', 'projects'];
     const navSections = navSectionsIds.map(id => document.getElementById(id))
@@ -62,7 +81,7 @@ export function NavBar() {
         <input className={styles.menuBtn} type="checkbox" id="menuBtn"/>
         <label className={styles.menuIcon} htmlFor="menuBtn" id={"menuIcon"}><span className={styles.navicon}/></label>
         <ul className={styles.menu}>
-          <li><a id="nav-home" className={styles.active} href="#">Home</a></li>
+          <li><a id="nav-home" className={styles.active} href="#home">Home</a></li>
           <li><a id="nav-about" href="#about">About</a></li>
           <li><a id="nav-experience" href="#experience">Experience</a></li>
           <li><a id="nav-projects" href="#projects">Projects</a></li>
